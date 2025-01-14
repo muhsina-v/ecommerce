@@ -1,5 +1,7 @@
 import React from 'react'
 import Registration from './components/user/Registration'
+import Login from './components/user/login'
+
 
 function App() {
 
@@ -7,6 +9,7 @@ function App() {
     <>
       <h1>
         <Registration />
+        <Login />
          </h1>
       </>
     
