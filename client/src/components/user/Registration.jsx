@@ -11,12 +11,9 @@ function Registration() {
   });
 
   const [errors, setErrors] = useState({});
-
-  // Validation logic
   const validateField = (name, value) => {
     const newErrors = { ...errors };
 
-    // Name validation
     if (name === "name") {
       if (!value.trim()) {
         newErrors.name = "Name is required.";
@@ -25,7 +22,7 @@ function Registration() {
       }
     }
 
-    // Email validation
+    
     if (name === "email") {
       if (!value.trim()) {
         newErrors.email = "Email is required.";
@@ -35,8 +32,7 @@ function Registration() {
         delete newErrors.email;
       }
     }
-
-    // Phone number validation
+    
     if (name === "phonenumber") {
       if (!value.trim()) {
         newErrors.phonenumber = "Phone number is required.";
@@ -46,8 +42,7 @@ function Registration() {
         delete newErrors.phonenumber;
       }
     }
-
-    // Password validation
+   
     if (name === "password") {
       if (!value) {
         newErrors.password = "Password is required.";
@@ -63,8 +58,7 @@ function Registration() {
         delete newErrors.password;
       }
     }
-
-    // Confirm password validation
+   
     if (name === "cpassword") {
       if (!value) {
         newErrors.cpassword = "Confirm Password is required.";
@@ -78,22 +72,18 @@ function Registration() {
     setErrors(newErrors);
   };
 
-  // Handle input changes
   const change = (e) => {
     const { name, value } = e.target;
     setInput({ ...input, [name]: value });
-    validateField(name, value); // Validate field on change
+    validateField(name, value); 
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate all fields
     const newErrors = {};
     Object.keys(input).forEach((key) => validateField(key, input[key]));
 
-    // If there are errors, stop submission
     if (Object.keys(errors).length > 0) {
       alert("Please fix the errors before submitting.");
       return;
@@ -102,7 +92,7 @@ function Registration() {
     alert("Registration Successful!");
     console.log("Form submitted successfully:", input);
 
-    // Reset the form
+    
     setInput({
       name: "",
       email: "",
@@ -111,7 +101,7 @@ function Registration() {
       cpassword: "",
     });
 
-    // Clear errors
+    
     setErrors({});
   };
 
@@ -123,7 +113,7 @@ function Registration() {
             Registration
           </h2>
 
-          {/* Name Input */}
+         
           <label className="block text-sm font-medium text-gray-600">
             Name
             <input
@@ -137,7 +127,6 @@ function Registration() {
             {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
           </label>
 
-          {/* Phone Number Input */}
           <label className="block text-sm font-medium text-gray-600">
             Phone Number
             <input
@@ -153,7 +142,7 @@ function Registration() {
             )}
           </label>
 
-          {/* Email Input */}
+        
           <label className="block text-sm font-medium text-gray-600">
             Email
             <input
@@ -167,7 +156,7 @@ function Registration() {
             {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
           </label>
 
-          {/* Password Input */}
+          
           <label className="block text-sm font-medium text-gray-600">
             Password
             <input
@@ -183,7 +172,7 @@ function Registration() {
             )}
           </label>
 
-          {/* Confirm Password Input */}
+         
           <label className="block text-sm font-medium text-gray-600">
             Confirm Password
             <input
@@ -199,7 +188,7 @@ function Registration() {
             )}
           </label>
 
-          {/* Submit Button */}
+         
           <button
             type="submit"
             className="w-full py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-200"
