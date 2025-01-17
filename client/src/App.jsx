@@ -8,6 +8,7 @@ import Bedroom from './pages/Bedroom'
 import Kitchendining from './pages/Kitchendining'
 import Collections from './pages/Collections'
 import Footer from './components/user/hero/Footer'
+import Home from './pages/Home'
 
 function App() {
 
@@ -17,8 +18,8 @@ function App() {
        <BrowserRouter>
        <Navbar />
        <Routes>
-       
-             <Route path='/' element={<Collections />}/>
+             <Route path='/' element={<Home />}/>
+             <Route path='/Collections' element={<Collections />}/>
              <Route path='/Bedroom' element={<Bedroom />}/>
              <Route path='/ Homedecor' element={<Homedecor />}/>
              <Route path='/kitchendining' element={<Kitchendining />}/>

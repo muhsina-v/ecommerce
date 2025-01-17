@@ -7,7 +7,7 @@ function Footer() {
 
   return (
     <div>
-    <footer className="bg-red-900 text-white mt-10">
+    <footer className="bg-gray-800 text-white mt-10">
     <div className="container mx-auto px-6 py-8">
       <div className="flex flex-wrap justify-between">
         
@@ -50,7 +50,8 @@ function Footer() {
         <div className="w-full md:w-1/3 mb-6">
           <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
           <div className="flex gap-4">
-            <FaFacebook className="text-2xl cursor-pointer hover:text-blue-500 transition-all" />
+            <a href=""></a>
+            <FaFacebook className="text-2xl cursor-pointer hover:text-blue-500 transition-all"/>
             <FaTwitter className="text-2xl cursor-pointer hover:text-blue-400 transition-all" />
             <FaInstagram className="text-2xl cursor-pointer hover:text-pink-500 transition-all" />
           </div>
