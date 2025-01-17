@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Register.css";
+import { useNavigate } from "react-router-dom";
 
 function Registration() {
+  const navigate=useNavigate()
   const [input, setInput] = useState({
     name: "",
     email: "",
@@ -189,7 +191,7 @@ function Registration() {
           </label>
 
          
-          <button
+          <button onClick={()=>navigate("/login")}
             type="submit"
             className="w-full py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-200"
           >

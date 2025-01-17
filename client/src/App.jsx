@@ -1,10 +1,13 @@
 import React from 'react'
 import Registration from './components/user/Registration'
 import Login from './components/user/login'
-import Navnar from './components/user/hero/navnar'
-import { BrowserRouter,Router,Route } from 'react-router-dom'
-import ShopCatagory from './pages/ShopCatagory'
-
+import Navbar from './components/user/hero/Navbar'
+import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import Homedecor from './pages/Homedecor'
+import Bedroom from './pages/Bedroom'
+import Kitchendining from './pages/Kitchendining'
+import Collections from './pages/Collections'
+import Footer from './components/user/hero/Footer'
 
 function App() {
 
@@ -12,20 +15,20 @@ function App() {
     <>
       
        <BrowserRouter>
-       <Navnar />
-       <Router>
-             <Route path='/' element={<collections />}/>
-             <Route path='/' element={<ShopCatagory />}/>
-             <Route path='/' element={<ShopCatagory />}/>
-             <Route path='/' element={<ShopCatagory />}/>
-
-        </Router>
+       <Navbar />
+       <Routes>
        
-       </BrowserRouter>
+             <Route path='/' element={<Collections />}/>
+             <Route path='/Bedroom' element={<Bedroom />}/>
+             <Route path='/ Homedecor' element={<Homedecor />}/>
+             <Route path='/kitchendining' element={<Kitchendining />}/>
+             <Route path= "/login" element={<Login/>}/>
+             <Route path= "/register" element={<Registration/>}/>
 
-        <Registration />
-        <Login />
+        </Routes>
       
+        <Footer />
+        </BrowserRouter>
       </>
     
   )

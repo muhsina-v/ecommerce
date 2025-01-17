@@ -1,6 +1,8 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+    const navigate=useNavigate()
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -17,6 +19,7 @@ function Login() {
     // Clear the error and simulate login success
     setError("");
     alert("Login successful!");
+  
   };
 
   return (
@@ -58,13 +61,15 @@ function Login() {
           </div>
 
           {/* Submit Button */}
-          <button
+          <button onClick={()=>navigate("/")}
             type="submit"
             className="w-full py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-200"
           >
             Login
           </button>
+          
         </form>
+        <h1>don't have an account <a href="/register"className="text-blue-500   hover:text-blue-800" >Register</a>here! </h1>
       </div>
     </div>
   );
