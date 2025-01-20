@@ -27,7 +27,7 @@ function Navbar() {
         
         {/* Shopping Cart */}
         <div className="relative group">
-          <FaShoppingCart className="text-black text-2xl cursor-pointer group-hover:text-red-400 group-hover:scale-110 transition-all" />
+          <FaShoppingCart onClick={()=> navigate('/Cart')}className="text-black text-2xl cursor-pointer group-hover:text-red-400 group-hover:scale-110 transition-all" />
           {cartCount > 0 && (
             <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-bold rounded-full px-2">
               {cartCount}
@@ -36,7 +36,7 @@ function Navbar() {
         </div>
 
         {/* Wishlist */}
-        <FaRegHeart className="text-black text-2xl cursor-pointer hover:text-red-400 hover:scale-110 transition-all" />
+        <FaRegHeart onClick={()=> navigate('/Wishlist')} className="text-black text-2xl cursor-pointer hover:text-red-400 hover:scale-110 transition-all" />
         <button 
           onClick={() => navigate('/')} 
           className="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400">

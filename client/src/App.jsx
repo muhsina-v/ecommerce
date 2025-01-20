@@ -9,6 +9,9 @@ import Kitchendining from './pages/Kitchendining'
 import Collections from './pages/Collections'
 import Footer from './components/user/hero/Footer'
 import Home from './pages/Home'
+import Cart from './pages/cart'
+import Wishlist from './pages/wishlist'
+
 
 function App() {
 
@@ -21,10 +24,12 @@ function App() {
              <Route path='/' element={<Home />}/>
              <Route path='/Collections' element={<Collections />}/>
              <Route path='/Bedroom' element={<Bedroom />}/>
-             <Route path='/ Homedecor' element={<Homedecor />}/>
+             <Route path='/Homedecor' element={<Homedecor />}/>
              <Route path='/kitchendining' element={<Kitchendining />}/>
              <Route path= "/login" element={<Login/>}/>
              <Route path= "/register" element={<Registration/>}/>
+             <Route path='/Cart' element={<Cart />}/>
+             <Route path='/wishlist' element={<Wishlist />}/>
 
         </Routes>
       
