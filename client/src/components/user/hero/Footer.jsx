@@ -19,7 +19,7 @@ function Footer() {
           </p>
         </div>
 
-        {/* Quick Links */}
+       
         <div className="w-full md:w-1/3 mb-6">
           <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
           <ul>
@@ -46,7 +46,7 @@ function Footer() {
           </ul>
         </div>
 
-        {/* Social Media */}
+      
         <div className="w-full md:w-1/3 mb-6">
           <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
           <div className="flex gap-4">
@@ -59,7 +59,7 @@ function Footer() {
       </div>
     </div>
 
-    {/* Footer Bottom */}
+   
     <div className="bg-gray-700 text-center py-4">
       <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
     </div>

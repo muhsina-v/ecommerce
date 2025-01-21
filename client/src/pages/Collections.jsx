@@ -1,20 +1,30 @@
 import React, { useState, useEffect } from 'react';
-import ProductData from '../db.json';
+import axios from 'axios';
 
 function Collections() {
-  const [collections, setCollections] = useState([]);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
-    const filteredProducts = ProductData.products.filter((product) => product.price >= 10);
-    setCollections(filteredProducts);
-  }, []);
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('http://localhost:5000/products');
+        setData(response.data);
+        console.log("dataaa",data);
+        
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []); 
 
   return (
     <div className="bg-gray-100 min-h-screen p-6">
       <h1 className="text-4xl font-bold text-center text-red-500 mb-6">Our Collections</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {collections.map((product) => (
+        {data.map((product) => (
           <div
             key={product.id}
             className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300"

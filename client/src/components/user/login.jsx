@@ -10,17 +10,19 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simple validation
     if (!username || !password) {
       setError("Both username and password are required!");
       return;
     }
 
-    // Clear the error and simulate login success
     setError("");
     alert("Login successful!");
   
   };
+
+  
+
+
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -32,7 +34,7 @@ function Login() {
         )}
 
         <form onSubmit={handleSubmit} className="mt-6">
-          {/* Username Input */}
+        
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-600">
               Username
@@ -46,7 +48,6 @@ function Login() {
             />
           </div>
 
-          {/* Password Input */}
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-600">
               Password
@@ -60,7 +61,6 @@ function Login() {
             />
           </div>
 
-          {/* Submit Button */}
           <button onClick={()=>navigate("/")}
             type="submit"
             className="w-full py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-200"

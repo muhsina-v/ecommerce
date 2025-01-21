@@ -1,204 +1,84 @@
-import React, { useState } from "react";
-import "./Register.css";
+import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../context/UserProvider";
 
 function Registration() {
-  const navigate=useNavigate()
+  const navigate = useNavigate();
+  const { registerUser } = useContext(UserContext);
   const [input, setInput] = useState({
     name: "",
     email: "",
-    phonenumber: "",
+    phone: "",
     password: "",
     cpassword: "",
   });
 
   const [errors, setErrors] = useState({});
-  const validateField = (name, value) => {
-    const newErrors = { ...errors };
+  const [loading, setLoading] = useState(false);
 
-    if (name === "name") {
-      if (!value.trim()) {
-        newErrors.name = "Name is required.";
-      } else {
-        delete newErrors.name;
-      }
-    }
+  const validate = () => {
+    const newErrors = {};
 
-    
-    if (name === "email") {
-      if (!value.trim()) {
-        newErrors.email = "Email is required.";
-      } else if (!/\S+@\S+\.\S+/.test(value)) {
-        newErrors.email = "Invalid email format.";
-      } else {
-        delete newErrors.email;
-      }
+    if (!input.name.trim()) newErrors.name = "Name is required.";
+    if (!input.email.trim()) newErrors.email = "Email is required.";
+    else if (!/\S+@\S+\.\S+/.test(input.email)) newErrors.email = "Invalid email format.";
+    if (!input.phone.trim()) newErrors.phone = "Phone number is required.";
+    else if (!/^\d{10}$/.test(input.phone)) newErrors.phone = "Phone number must be 10 digits.";
+    if (!input.password) newErrors.password = "Password is required.";
+    else if (input.password.length < 8 || !/[A-Z]/.test(input.password) || !/[0-9]/.test(input.password) || !/[!@#$%^&*]/.test(input.password)) {
+      newErrors.password = "Password must be at least 8 characters with an uppercase, a number, and a special character.";
     }
-    
-    if (name === "phonenumber") {
-      if (!value.trim()) {
-        newErrors.phonenumber = "Phone number is required.";
-      } else if (!/^\d{10}$/.test(value)) {
-        newErrors.phonenumber = "Phone number must be 10 digits.";
-      } else {
-        delete newErrors.phonenumber;
-      }
-    }
-   
-    if (name === "password") {
-      if (!value) {
-        newErrors.password = "Password is required.";
-      } else if (
-        value.length < 8 ||
-        !/[A-Z]/.test(value) ||
-        !/[0-9]/.test(value) ||
-        !/[!@#$%^&*]/.test(value)
-      ) {
-        newErrors.password =
-          "Password must have at least 8 characters, including an uppercase letter, a number, and a special character.";
-      } else {
-        delete newErrors.password;
-      }
-    }
-   
-    if (name === "cpassword") {
-      if (!value) {
-        newErrors.cpassword = "Confirm Password is required.";
-      } else if (value !== input.password) {
-        newErrors.cpassword = "Passwords do not match.";
-      } else {
-        delete newErrors.cpassword;
-      }
-    }
+    if (!input.cpassword) newErrors.cpassword = "Confirm Password is required.";
+    else if (input.cpassword !== input.password) newErrors.cpassword = "Passwords do not match.";
 
     setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
   };
 
-  const change = (e) => {
-    const { name, value } = e.target;
-    setInput({ ...input, [name]: value });
-    validateField(name, value); 
+  const handleChange = (e) => {
+    setInput({ ...input, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!validate()) return;
 
-    const newErrors = {};
-    Object.keys(input).forEach((key) => validateField(key, input[key]));
-
-    if (Object.keys(errors).length > 0) {
-      alert("Please fix the errors before submitting.");
-      return;
+    try {
+      setLoading(true);
+      await registerUser(input.name, input.phone, input.email, input.password);
+      alert("Registration Successful!");
+      navigate("/login");
+    } catch (error) {
+      console.log(error)
+    } finally {
+      setLoading(false);
     }
-
-    alert("Registration Successful!");
-    console.log("Form submitted successfully:", input);
-
-    
-    setInput({
-      name: "",
-      email: "",
-      phonenumber: "",
-      password: "",
-      cpassword: "",
-    });
-
-    
-    setErrors({});
   };
 
   return (
-    <div>
-      <div className="container mx-auto p-6 max-w-md md:max-w-lg lg:max-w-xl bg-gray-50 shadow-md rounded-md border border-gray-300">
-        <form onSubmit={handleSubmit} className="flex flex-col space-y-6">
-          <h2 className="text-2xl font-semibold text-center text-gray-700">
-            Registration
-          </h2>
+    <div className="container mx-auto p-6 max-w-md bg-gray-50 shadow-md rounded-md border border-gray-300">
+      <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
+        <h2 className="text-2xl font-semibold text-center text-gray-700">Register</h2>
 
-         
-          <label className="block text-sm font-medium text-gray-600">
-            Name
+        {["name", "phone", "email", "password", "cpassword"].map((field, index) => (
+          <div key={index}>
             <input
-              type="text"
-              name="name"
-              value={input.name}
-              onChange={change}
-              placeholder="Enter your name"
-              className="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none"
+              type={field.includes("password") ? "password" : "text"}
+              name={field}
+              value={input[field]}
+              onChange={handleChange}
+              placeholder={`Enter ${field}`}
+              className="w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400"
             />
-            {errors.name && <p className="text-red-500 text-sm">{errors.name}</p>}
-          </label>
+            {errors[field] && <p className="text-red-500 text-sm">{errors[field]}</p>}
+          </div>
+        ))}
 
-          <label className="block text-sm font-medium text-gray-600">
-            Phone Number
-            <input
-              type="text"
-              name="phonenumber"
-              value={input.phonenumber}
-              onChange={change}
-              placeholder="Enter your phone number"
-              className="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none"
-            />
-            {errors.phonenumber && (
-              <p className="text-red-500 text-sm">{errors.phonenumber}</p>
-            )}
-          </label>
-
-        
-          <label className="block text-sm font-medium text-gray-600">
-            Email
-            <input
-              type="email"
-              name="email"
-              value={input.email}
-              onChange={change}
-              placeholder="Enter your email"
-              className="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none"
-            />
-            {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
-          </label>
-
-          
-          <label className="block text-sm font-medium text-gray-600">
-            Password
-            <input
-              type="password"
-              name="password"
-              value={input.password}
-              onChange={change}
-              placeholder="Enter your password"
-              className="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none"
-            />
-            {errors.password && (
-              <p className="text-red-500 text-sm">{errors.password}</p>
-            )}
-          </label>
-
-         
-          <label className="block text-sm font-medium text-gray-600">
-            Confirm Password
-            <input
-              type="password"
-              name="cpassword"
-              value={input.cpassword}
-              onChange={change}
-              placeholder="Confirm your password"
-              className="mt-1 w-full p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none"
-            />
-            {errors.cpassword && (
-              <p className="text-red-500 text-sm">{errors.cpassword}</p>
-            )}
-          </label>
-
-         
-          <button onClick={()=>navigate("/login")}
-            type="submit"
-            className="w-full py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-200"
-          >
-            Submit
-          </button>
-        </form>
-      </div>
+        <button type="submit" className="w-full py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition" disabled={loading}>
+          {loading ? "Registering..." : "Register"}
+        </button>
+      </form>
     </div>
   );
 }
