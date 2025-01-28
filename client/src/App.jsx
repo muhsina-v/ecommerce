@@ -2,7 +2,7 @@ import React from 'react'
 import Registration from './components/user/Registration'
 import Login from './components/user/login'
 import Navbar from './components/user/hero/Navbar'
-import { BrowserRouter,Routes,Route } from 'react-router-dom'
+import {Routes,Route } from 'react-router-dom'
 import Homedecor from './pages/Homedecor'
 import Bedroom from './pages/Bedroom'
 import Kitchendining from './pages/Kitchendining'
@@ -18,7 +18,6 @@ function App() {
   return (
     <>
       
-       <BrowserRouter>
        <Navbar />
        <Routes>
              <Route path='/' element={<Home />}/>
@@ -30,11 +29,12 @@ function App() {
              <Route path= "/register" element={<Registration/>}/>
              <Route path='/Cart' element={<Cart />}/>
              <Route path='/wishlist' element={<Wishlist />}/>
+             
+             {/* <Route path="*" element={<NotFound />} />  Handles 404 */}
 
         </Routes>
       
         <Footer />
-        </BrowserRouter>
       </>
     
   )

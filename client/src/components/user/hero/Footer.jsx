@@ -1,7 +1,6 @@
 import React from 'react'
-import {FaFacebook,
-    FaTwitter,
-    FaInstagram} from "react-icons/fa";
+import {FaFacebook,FaTwitter,
+FaInstagram} from "react-icons/fa";
 
 function Footer() {
 
@@ -24,22 +23,22 @@ function Footer() {
           <h2 className="text-lg font-semibold mb-4">Quick Links</h2>
           <ul>
             <li className="mb-2">
-              <a href="#" className="hover:text-red-400">
-                Collection
+              <a href="/collections" className="hover:text-red-400">
+                Collections
               </a>
             </li>
             <li className="mb-2">
-              <a href="#" className="hover:text-red-400">
+              <a href="/Bedroom" className="hover:text-red-400">
                 Bed Room
               </a>
             </li>
             <li className="mb-2">
-              <a href="#" className="hover:text-red-400">
+              <a href="/Homedecor" className="hover:text-red-400">
                 Home Decor
               </a>
             </li>
             <li className="mb-2">
-              <a href="#" className="hover:text-red-400">
+              <a href="/Kitchendining" className="hover:text-red-400">
                 Kitchen/Dining
               </a>
             </li>
@@ -50,10 +49,13 @@ function Footer() {
         <div className="w-full md:w-1/3 mb-6">
           <h2 className="text-lg font-semibold mb-4">Follow Us</h2>
           <div className="flex gap-4">
-            <a href=""></a>
-            <FaFacebook className="text-2xl cursor-pointer hover:text-blue-500 transition-all"/>
-            <FaTwitter className="text-2xl cursor-pointer hover:text-blue-400 transition-all" />
-            <FaInstagram className="text-2xl cursor-pointer hover:text-pink-500 transition-all" />
+
+            <a href="https://www.facebook.com/"  className="text-2xl cursor-pointer hover:text-blue-500 transition-all">
+            <FaFacebook/></a>
+            <a href="https://x.com/?lang=en">  
+            <FaTwitter className="text-2xl cursor-pointer hover:text-blue-400 transition-all" /></a>
+            <a href="https://www.instagram.com/?hl=en">
+            <FaInstagram className="text-2xl cursor-pointer hover:text-pink-500 transition-all" /></a>
           </div>
         </div>
       </div>
@@ -61,15 +63,11 @@ function Footer() {
 
    
     <div className="bg-gray-700 text-center py-4">
-      <p>&copy; {new Date().getFullYear()} Your Company. All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} Luxeform. All rights reserved.</p>
     </div>
   </footer>
 </div>
 );
 }
-
-    
-  
-
 
 export default Footer

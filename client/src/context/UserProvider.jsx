@@ -1,32 +1,81 @@
 import axios from "axios";
 import { createContext, useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const UserContext = createContext();
 
 export const UserProvider = ({ children }) => {
-  const registerUser = async (name, phone, email, password) => {
+  const [currentUser, setCurrentUser] = useState(null);
+  const [users, setUsers] = useState([]);
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const fetchAllUsers = async () => {
+      const { data } = await axios.get("http://localhost:5000/users/");
+      setUsers(data);
+    };
+    fetchAllUsers();
+  }, []);
+
+  useEffect(() => {
+    const user = localStorage.getItem("currentUser");
+    setCurrentUser(JSON.parse(user));
+  }, []);
+
+  const registerUser = async (name, email, password) => {
     try {
-      await axios.post("http://localhost:5000/user/", {
+      const existingUser = users.find((u) => u.email === email);
+      if (existingUser) {
+        alert("User already exists");
+        return;
+      }
+      await axios.post("http://localhost:5000/users/", {
         name: name,
         email: email,
-        phone: phone,
         password: password,
+        cart: [],
+        isBlocked: false,
+        isAdmin: false,
       });
+      navigate("/login")
+    } catch (error) {
+      console.log(error, "Register Error");
+    }
+  };
+
+
+  const loginUser = async (email, password) => {
+    try {
+      const user = users.find(
+        (u) => u.email === email && u.password === password
+      );
+      if (!user) {
+        alert("Invalid Credentials")
+        return;
+      }
+      setCurrentUser(user);
+      localStorage.setItem("currentUser", JSON.stringify(user));
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
   };
 
-  const loginUser = async (email, password) => {
-    try {
-    } catch (error) {
-      console.log(err);
+  const userLogout = () => {
+    const confirm = window.confirm("Are You Sure");
+    if (confirm) {
+      setCurrentUser(null);
+      localStorage.removeItem("currentUser");
     }
   };
 
-  return (
-    <UserContext.Provider value={{ registerUser }}>
-      {children}
-    </UserContext.Provider>
-  );
+
+  const value = {
+    loginUser,
+    registerUser,
+    currentUser,
+    userLogout,
+  };
+
+  return <UserContext.Provider value={value}>{children}</UserContext.Provider>;
 };

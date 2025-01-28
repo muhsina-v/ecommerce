@@ -1,28 +1,25 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { UserContext } from "../../context/UserProvider";
 
 function Login() {
-    const navigate=useNavigate()
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+  const {loginUser} = useContext(UserContext)
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!username || !password) {
+    if (!email || !password) {
       setError("Both username and password are required!");
       return;
     }
-
-    setError("");
-    alert("Login successful!");
-  
+    try {
+      await(loginUser(email,password))
+    } catch (error) {
+      console.log(error)
+    }
   };
-
-  
-
-
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
@@ -37,13 +34,13 @@ function Login() {
         
           <div className="mb-4">
             <label className="block text-sm font-medium text-gray-600">
-              Username
+             Email
             </label>
             <input
               type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              placeholder="Enter your username"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your Email"
               className="w-full mt-1 p-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-400 focus:outline-none"
             />
           </div>
@@ -61,7 +58,7 @@ function Login() {
             />
           </div>
 
-          <button onClick={()=>navigate("/")}
+          <button
             type="submit"
             className="w-full py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-200"
           >
