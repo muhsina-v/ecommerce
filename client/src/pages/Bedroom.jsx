@@ -1,12 +1,10 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 function Bedroom() {
-    const bedroomFurniture = [
-        { id: 7, name: "King Size Bed Frame", price: "$300", img: "https://i.pinimg.com/564x/ed/0b/80/ed0b80d541fdab5e923cb0e1cb76eaad.jpg" },
-        { id: 8, name: "Wooden Wardrobe", price: "$250", img: "https://i.pinimg.com/564x/9e/5b/4f/9e5b4f8b14d68c6b3b7264c7a9bfc179.jpg" },
-        { id: 9, name: "Bedside Nightstand", price: "$80", img: "https://i.pinimg.com/564x/21/eb/c2/21ebc23b7d8a6a76cd790575d2be08d5.jpg" }
-      ];
+  const [data,setdata]=useState()
+
+   
   return (
     <div className="bg-gray-100 min-h-screen p-6">
        <h1 className="text-4xl font-bold text-center text-red-500 mb-6">Bedroom</h1>

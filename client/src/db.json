@@ -198,37 +198,19 @@
   ],
   "users": [
     {
-      "id": "dc36",
-      "name": "muchina",
-      "email": "muchina@gm",
+      "id": "3790",
+      "name": "Muhsina.v ",
+      "email": "muhsinamolty44@gmail.com",
       "password": "123",
       "cart": [],
       "isBlocked": false,
       "isAdmin": false
     },
     {
-      "id": "22f4",
-      "name": "irfan",
-      "email": "irfan@gmail.com",
-      "password": "123",
-      "cart": [],
-      "isBlocked": false,
-      "isAdmin": false
-    },
-    {
-      "id": "c522",
-      "name": "hiba",
-      "email": "hibakm@gmail.com",
-      "password": "123",
-      "cart": [],
-      "isBlocked": false,
-      "isAdmin": false
-    },
-    {
-      "id": "bde1",
-      "name": "anas",
-      "email": "anas@gmail.com",
-      "password": "123",
+      "id": "dfe2",
+      "name": "na",
+      "email": "na@g",
+      "password": "111",
       "cart": [],
       "isBlocked": false,
       "isAdmin": false

@@ -11,7 +11,7 @@ export const UserProvider = ({ children }) => {
 
   useEffect(() => {
     const fetchAllUsers = async () => {
-      const { data } = await axios.get("http://localhost:5000/users/");
+      const { data } = await axios.get("http://localhost:3000/users/");
       setUsers(data);
     };
     fetchAllUsers();
@@ -24,12 +24,12 @@ export const UserProvider = ({ children }) => {
 
   const registerUser = async (name, email, password) => {
     try {
-      const existingUser = users.find((u) => u.email === email);
+      const existingUser = users.find((u) => u?.email === email);
       if (existingUser) {
         alert("User already exists");
         return;
       }
-      await axios.post("http://localhost:5000/users/", {
+      await axios.post("http://localhost:3000/users/", {
         name: name,
         email: email,
         password: password,
@@ -37,25 +37,25 @@ export const UserProvider = ({ children }) => {
         isBlocked: false,
         isAdmin: false,
       });
-      navigate("/login")
+      navigate("/login");
     } catch (error) {
       console.log(error, "Register Error");
     }
   };
-
 
   const loginUser = async (email, password) => {
     try {
       const user = users.find(
         (u) => u.email === email && u.password === password
       );
-      if (!user) {
-        alert("Invalid Credentials")
+      if (user) {
+        setCurrentUser(user);
+        localStorage.setItem("currentUser", JSON.stringify(user));
+        navigate("/");
+      }else{
+        alert("Invalid Credentials");
         return;
       }
-      setCurrentUser(user);
-      localStorage.setItem("currentUser", JSON.stringify(user));
-      navigate("/");
     } catch (error) {
       console.log(error);
     }
@@ -68,7 +68,6 @@ export const UserProvider = ({ children }) => {
       localStorage.removeItem("currentUser");
     }
   };
-
 
   const value = {
     loginUser,
