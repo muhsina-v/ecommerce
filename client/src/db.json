@@ -7,11 +7,9 @@
       "imageCategory": "Sofa",
       "description": "Friheten Sleeper Sectional, 3-seat with storage",
       "price": 899,
-      "quantity": 10,
       "offerPrice": 10000,
       "details": "Enhance your living room with the Friheten Sleeper Sectional in Skiftebo Dark Gray. This versatile sofa offers spacious seating and convenient storage, perfect for small spaces. The sleeper feature provides a comfortable bed for guests, while the modern design complements various decor styles.",
-      "category": "Furniture",
-      "rating": "★★★★★"
+      "category": "Furniture"
     },
     {
       "id": "2",
@@ -20,11 +18,9 @@
       "imageCategory": "Dining Set",
       "description": "Nordviken Table and 6 Chairs",
       "price": 8799,
-      "quantity": 5,
       "offerPrice": 9000,
       "details": "Create a classic dining experience with the Nordviken Table and 6 Chairs in Antique Stain. This dining set features a sturdy table and comfortable chairs, perfect for family meals or gatherings. The timeless design and durable construction ensure long-lasting enjoyment.",
-      "category": "Dining Room",
-      "rating": "★★★★☆"
+      "category": "Dining Room"
     },
     {
       "id": "3",
@@ -33,11 +29,9 @@
       "imageCategory": "Bed Frame",
       "description": "Slattum Upholstered Bed Frame",
       "price": 699,
-      "quantity": 15,
       "offerPrice": 800,
       "details": "Transform your bedroom with the Slattum Upholstered Bed Frame in Knisa Light Gray. This bed frame combines modern style with comfort, featuring a padded headboard and durable construction. Its neutral color and elegant design create a relaxing atmosphere.",
-      "category": "Bedroom",
-      "rating": "★★★★★"
+      "category": "Bedroom"
     },
     {
       "id": "4",
@@ -46,11 +40,9 @@
       "imageCategory": "Coffee Table",
       "description": "Vittsjoe Coffee Table",
       "price": 499.99,
-      "quantity": 20,
       "offerPrice": 374.99,
       "details": "Add a modern touch to your living room with the Vittsjoe Coffee Table. Featuring a black-brown frame and glass top, this table combines style with functionality. Its sleek design and versatile use make it a perfect addition to any contemporary space.",
-      "category": "Furniture",
-      "rating": "★★★★★"
+      "category": "Furniture"
     },
     {
       "id": "5",
@@ -59,24 +51,20 @@
       "imageCategory": "Wardrobe",
       "description": "Pax/Bergsbo Wardrobe",
       "price": 799,
-      "quantity": 8,
       "offerPrice": 639.2,
       "details": "Organize your bedroom with the Pax/Bergsbo Wardrobe in Dark Gray. This spacious wardrobe offers ample storage and features a modern design. Its sliding doors and adjustable shelves provide flexibility, ideal for keeping your clothes and accessories organized.",
-      "category": "Bedroom",
-      "rating": "★★★★★"
+      "category": "Bedroom"
     },
     {
       "id": "6",
-      "type": "Storage Furniture",
-      "image": "https://www.ikea.com/us/en/images/products/kallax-shelf-unit-white__0644757_pe702939_s5.jpg?f=s",
-      "imageCategory": "Shelf Unit",
-      "description": "Kallax Shelf Unit, White",
+      "type": "Decor",
+      "image": "https://homedecorlo.com/cdn/shop/products/61_lDJ6opzL_530x@2x.jpg?v=1630399629",
+      "imageCategory": "warm light",
+      "description": "Chandelier Hanging Light",
       "price": 69.99,
-      "quantity": 12,
       "offerPrice": 55.99,
-      "details": "Stay organized with the Kallax Shelf Unit in White. This versatile storage solution is perfect for books, decor, or media storage. Its simple yet modern design blends seamlessly into any room, offering both style and functionality.",
-      "category": "Storage",
-      "rating": "★★★★☆"
+      "details": "Add warmth and elegance to your home with our beautiful hanging lights, designed to create a cozy and stylish ambiance. Whether you prefer modern pendant lights, vintage chandeliers, or minimalist hanging lamps, our collection offers a variety of designs to complement any decor.",
+      "category": "Storage"
     },
     {
       "id": "7",
@@ -88,8 +76,7 @@
       "quantity": 7,
       "offerPrice": 186.75,
       "details": "Add storage and style to your bedroom with the Björksnäs 5-Drawer Chest in Birch. This chest features solid birch wood construction and spacious drawers, perfect for organizing clothes or accessories. Its classic design adds a touch of elegance to any space.",
-      "category": "Bedroom",
-      "rating": "★★★★★"
+      "category": "Bedroom"
     },
     {
       "id": "8",
@@ -101,21 +88,19 @@
       "quantity": 30,
       "offerPrice": 31.99,
       "details": "Upgrade your kitchen or bar area with the Stig Bar Stool in Black. This bar stool features a supportive backrest and comfortable seat, ideal for extended use. Its minimalist design and durable construction make it a stylish and practical choice.",
-      "category": "Furniture",
-      "rating": "★★★★★"
+      "category": "Furniture"
     },
     {
       "id": "9",
-      "type": "Office Furniture",
-      "image": "https://www.ikea.com/us/en/images/products/bekant-corner-desk-left-black-stained-ash-veneer-black__0736406_pe740525_s5.jpg?f=m",
-      "imageCategory": "Corner Desk",
-      "description": "Bekant Corner Desk Left",
+      "type": "Decor",
+      "image": "https://www.jiomart.com/images/product/original/rvvb0si6p6/sehaz-artworks-love-home-decor-items-wall-hanging-home-decor-items-wall-hanging-accessory-wall-decore-items-room-decoration-decoration-for-office-0042-product-images-orvvb0si6p6-p601030772-0-202304281600.jpg?im=Resize=(420,420)",
+      "imageCategory": "wall decor",
+      "description": "Crafted colourfull decor",
       "price": 5,
       "quantity": 4,
       "offerPrice": 323.1,
-      "details": "Create a productive workspace with the Bekant Corner Desk in Black Stained Ash Veneer. This corner desk offers ample space for work essentials and features a modern design. Its sturdy construction and practical layout enhance efficiency in any office setting.",
-      "category": "Furniture",
-      "rating": "★★★★☆"
+      "details": "Enhance your home with our exquisite Wall Decor Collection, designed to bring elegance and personality to any space. Whether you're looking for modern art pieces, vintage wall hangings, or nature-inspired designs, our collection offers a variety of styles to suit every taste.",
+      "category": "Furniture"
     },
     {
       "id": "10",
@@ -127,8 +112,7 @@
       "quantity": 10,
       "offerPrice": 69.3,
       "details": "Enjoy outdoor dining with the Askholmen Table and 2 Chairs in Light Brown Stained finish. This outdoor set features a compact design and durable materials, perfect for balconies or small patios. Its weather-resistant construction ensures long-term enjoyment.",
-      "category": "Bedroom",
-      "rating": "★★★★★"
+      "category": "Bedroom"
     },
     {
       "id": "11",
@@ -137,11 +121,9 @@
       "imageCategory": "Corner Sleeper Sofa",
       "description": "Finnala Sleeper Sofa",
       "price": 9,
-      "quantity": 3,
       "offerPrice": 909.3,
       "details": "Add versatility to your living room with the Finnala Corner Sleeper Sofa. This 5-seat sofa includes a chaise lounge, perfect for lounging or hosting guests. Its corner design maximizes space, while the sleeper function offers additional comfort for overnight guests.",
-      "category": "Furniture",
-      "rating": "★★★★★"
+      "category": "Furniture"
     },
     {
       "id": "12",
@@ -150,11 +132,9 @@
       "imageCategory": "Bed Frame",
       "description": "Malm Bed Frame",
       "price": 299,
-      "quantity": 6,
       "offerPrice": 239.2,
       "details": "Upgrade your bedroom with the Malm Bed Frame in Black-Brown. This modern bed frame features a sleek design and sturdy construction, providing a perfect foundation for a good night's sleep. The minimalist look complements any bedroom decor.",
-      "category": "Bedroom",
-      "rating": "★★★★☆"
+      "category": "Bedroom"
     },
     {
       "id": "13",
@@ -163,11 +143,9 @@
       "imageCategory": "Bed Frame",
       "description": "Malm Bed Frame",
       "price": 299,
-      "quantity": 6,
       "offerPrice": 239.2,
       "details": "Upgrade your bedroom with the Malm Bed Frame in Black-Brown. This modern bed frame features a sleek design and sturdy construction, providing a perfect foundation for a good night's sleep. The minimalist look complements any bedroom decor.",
-      "category": "Bedroom",
-      "rating": "★★★★☆"
+      "category": "Bedroom"
     },
     {
       "id": "14",
@@ -176,11 +154,9 @@
       "imageCategory": "Bed Frame",
       "description": "Malm Bed Frame",
       "price": 299,
-      "quantity": 6,
       "offerPrice": 239.2,
       "details": "Upgrade your bedroom with the Malm Bed Frame in Black-Brown. This modern bed frame features a sleek design and sturdy construction, providing a perfect foundation for a good night's sleep. The minimalist look complements any bedroom decor.",
-      "category": "Furniture",
-      "rating": "★★★★★"
+      "category": "Furniture"
     },
     {
       "id": "15",
@@ -189,7 +165,6 @@
       "imageCategory": "Bed Frame",
       "description": "Malm Bed Frame",
       "price": 299,
-      "quantity": 6,
       "offerPrice": 239.2,
       "details": "Upgrade your bedroom with the Malm Bed Frame in Black-Brown. This modern bed frame features a sleek design and sturdy construction, providing a perfect foundation for a good night's sleep. The minimalist look complements any bedroom decor.",
       "category": "Bedroom",

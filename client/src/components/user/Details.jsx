@@ -1,18 +1,19 @@
 import React, { useContext } from "react";
-import { DataProvider } from "../context/DataContext"; // Correct context import
+import { DataProvider } from "../context/DataContext"; 
+import { useParams } from "react-router-dom";
 
-function Bedroom() {
+function Details() {
   const { product } = useContext(DataProvider);
+  const {id}=useParams()
 
-  // Ensure product is not undefined
-  const bedroomData = product ? product.filter((item) => item.type === "Bedroom Furniture") : []
+  //const decorData = product ? product.filter((item) => item.type === "Decor") : [];
 
   return (
     <div className="bg-gray-100 min-h-screen p-6">
-      <h1 className="text-4xl font-bold text-center text-red-500 mb-6">Bedroom Collections</h1>
+      <h1 className="text-4xl font-bold text-center text-red-500 mb-6">Home Decor Collection</h1>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {bedroomData.map((item) => (
+        {product.map((item) => (
           <div key={item.id} className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition">
             <img src={item.image} alt={item.name} className="w-full h-40 object-cover rounded" />
             <h3 className="text-lg font-semibold mt-3">{item.name}</h3>
@@ -27,4 +28,4 @@ function Bedroom() {
   );
 }
 
-export default Bedroom;
+export default Details;
