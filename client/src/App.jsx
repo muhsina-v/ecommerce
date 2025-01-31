@@ -11,7 +11,7 @@ import Footer from './components/user/hero/Footer'
 import Home from './pages/Home'
 import Cart from './pages/cart'
 import Wishlist from './pages/wishlist'
-import Details from './components/user/details'
+import Details from './pages/Details'
 
 
 function App() {
@@ -30,7 +30,7 @@ function App() {
              <Route path= "/register" element={<Registration/>}/>
              <Route path='/Cart' element={<Cart />}/>
              <Route path='/wishlist' element={<Wishlist />}/>
-             <Route path='/:type/details/:id' element={<Details/>}/> 
+             <Route path='/product/details/:id' element={<Details/>}/> 
              
              {/* <Route path="*" element={<NotFound />} />  Handles 404 */}
 

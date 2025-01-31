@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { DataProvider } from "../context/DataContext";
 
 function Cart() {
+  
   const [cart, setCart] = useState([]);
 
  
@@ -20,7 +22,7 @@ function Cart() {
       <h1 className="text-4xl font-bold text-center text-red-500 mb-6">Shopping Cart</h1>
     
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-        {products.map((product) => (
+        {product.map((product) => (
           <div key={product.id} className="bg-white p-4 rounded-lg shadow-lg hover:shadow-xl transition duration-300">
             <img src={product.image} alt={product.name} className="w-full h-40 object-cover rounded" />
             <h3 className="text-lg font-semibold mt-3 text-gray-800">{product.name}</h3>
@@ -63,3 +65,7 @@ function Cart() {
 }
 
 export default Cart;
+
+
+
+
