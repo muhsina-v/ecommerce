@@ -10,13 +10,13 @@ import { CartProvider } from "./context/CartCondext.jsx";
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-      <CartProvider>
         <UserProvider>
+      <CartProvider>
           <DataContext>
             <App />
           </DataContext>
-        </UserProvider>
       </CartProvider>
+        </UserProvider>
     </BrowserRouter>
   </StrictMode>
 );

@@ -51,6 +51,7 @@ export const UserProvider = ({ children }) => {
       if (user) {
         setCurrentUser(user);
         localStorage.setItem("currentUser", JSON.stringify(user));
+        localStorage.setItem("cart",JSON.stringify(user?.cart))
         navigate("/");
       }else{
         alert("Invalid Credentials");
@@ -66,6 +67,7 @@ export const UserProvider = ({ children }) => {
     if (confirm) {
       setCurrentUser(null);
       localStorage.removeItem("currentUser");
+      localStorage.removeItem("cart");
     }
   };
 
@@ -74,6 +76,7 @@ export const UserProvider = ({ children }) => {
     registerUser,
     currentUser,
     userLogout,
+    setCurrentUser
   };
 
   return <UserContext.Provider value={value}>{children}</UserContext.Provider>;

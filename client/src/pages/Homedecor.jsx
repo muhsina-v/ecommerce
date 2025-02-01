@@ -1,9 +1,12 @@
-import React, { useContext } from "react";
-import { DataProvider } from "../context/DataContext"; 
+import { DataProvider } from "../context/DataContext";
+import { useContext } from "react";
 import CollectionCard from "../components/productComponents/CollectionCard";
+
+
 
 function Homedecor() {
   const { product } = useContext(DataProvider);
+ 
 
   const decorData = product ? product.filter((item) => item.type === "Decor") : [];
 
@@ -14,7 +17,11 @@ function Homedecor() {
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         {decorData.map((item,index) => (
          <CollectionCard product={item} index={index}/>
+      
+        
         ))}
+        
+      
       </div>
     </div>
   );
