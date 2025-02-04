@@ -173,20 +173,23 @@
   ],
   "users": [
     {
-      "id": "3790",
-      "name": "Muhsina.v ",
-      "email": "muhsinamolty44@gmail.com",
-      "password": "123",
-      "cart": [],
-      "isBlocked": false,
-      "isAdmin": false
-    },
-    {
-      "id": "dfe2",
+      "id": "0a2d",
       "name": "na",
       "email": "na@g",
       "password": "111",
       "cart": [
+        {
+          "id": "9",
+          "type": "Decor",
+          "image": "https://www.jiomart.com/images/product/original/rvvb0si6p6/sehaz-artworks-love-home-decor-items-wall-hanging-home-decor-items-wall-hanging-accessory-wall-decore-items-room-decoration-decoration-for-office-0042-product-images-orvvb0si6p6-p601030772-0-202304281600.jpg?im=Resize=(420,420)",
+          "imageCategory": "wall decor",
+          "description": "Crafted colourfull decor",
+          "price": 5,
+          "quantity": 1,
+          "offerPrice": 323.1,
+          "details": "Enhance your home with our exquisite Wall Decor Collection, designed to bring elegance and personality to any space. Whether you're looking for modern art pieces, vintage wall hangings, or nature-inspired designs, our collection offers a variety of styles to suit every taste.",
+          "category": "Furniture"
+        },
         {
           "id": "1",
           "type": "Living Room Furniture",
@@ -200,26 +203,29 @@
           "quantity": 1
         },
         {
-          "id": "2",
-          "type": "Dining Room Furniture",
-          "image": "https://images.squarespace-cdn.com/content/v1/58b9e3da9de4bbb44f9988ca/fe712f23-2bcf-4257-a7ad-5c680c8e7ea5/Traditional+dining+room+-+square+table+-+AI+Image.png",
-          "imageCategory": "Dining Set",
-          "description": "Nordviken Table and 6 Chairs",
-          "price": 8799,
-          "offerPrice": 9000,
-          "details": "Create a classic dining experience with the Nordviken Table and 6 Chairs in Antique Stain. This dining set features a sturdy table and comfortable chairs, perfect for family meals or gatherings. The timeless design and durable construction ensure long-lasting enjoyment.",
-          "category": "Dining Room",
+          "id": "5",
+          "type": "Bedroom Furniture",
+          "image": "https://i.pinimg.com/564x/21/c9/c2/21c9c2a3464def80a6b99ddcd92f849e.jpg",
+          "imageCategory": "Wardrobe",
+          "description": "Pax/Bergsbo Wardrobe",
+          "price": 799,
+          "offerPrice": 639.2,
+          "details": "Organize your bedroom with the Pax/Bergsbo Wardrobe in Dark Gray. This spacious wardrobe offers ample storage and features a modern design. Its sliding doors and adjustable shelves provide flexibility, ideal for keeping your clothes and accessories organized.",
+          "category": "Bedroom",
           "quantity": 1
-        }
-      ],
-      "isBlocked": false
-    },
-    {
-      "id": "eeee",
-      "name": "ba",
-      "email": "ba@g",
-      "password": "123",
-      "cart": [
+        },
+        {
+          "id": "7",
+          "type": "Bedroom Furniture",
+          "image": "https://i.pinimg.com/474x/ef/52/b4/ef52b4782dcdadaae5b3b51b381c3a66.jpg",
+          "imageCategory": "Drawer Chest",
+          "description": "Björksnäs 5-Drawer Chest, Birch",
+          "price": 249,
+          "quantity": 1,
+          "offerPrice": 186.75,
+          "details": "Add storage and style to your bedroom with the Björksnäs 5-Drawer Chest in Birch. This chest features solid birch wood construction and spacious drawers, perfect for organizing clothes or accessories. Its classic design adds a touch of elegance to any space.",
+          "category": "Bedroom"
+        },
         {
           "id": "4",
           "type": "Living Room Furniture",
@@ -231,8 +237,38 @@
           "details": "Add a modern touch to your living room with the Vittsjoe Coffee Table. Featuring a black-brown frame and glass top, this table combines style with functionality. Its sleek design and versatile use make it a perfect addition to any contemporary space.",
           "category": "Furniture",
           "quantity": 1
+        },
+        {
+          "id": "10",
+          "type": "Living Room Furniture",
+          "image": "https://i.pinimg.com/474x/cb/bf/e2/cbbfe237ab8f46e0b1112b1252780690.jpg",
+          "imageCategory": "Outdoor Set",
+          "description": "Askholmen Table and 2 Chairs",
+          "price": 99,
+          "quantity": 1,
+          "offerPrice": 69.3,
+          "details": "Enjoy outdoor dining with the Askholmen Table and 2 Chairs in Light Brown Stained finish. This outdoor set features a compact design and durable materials, perfect for balconies or small patios. Its weather-resistant construction ensures long-term enjoyment.",
+          "category": "Bedroom"
         }
       ],
+      "isBlocked": false,
+      "isAdmin": true
+    },
+    {
+      "id": "727f",
+      "name": "ba",
+      "email": "ba@g",
+      "password": "123",
+      "cart": [],
+      "isBlocked": false,
+      "isAdmin": false
+    },
+    {
+      "id": "16b3",
+      "name": "Muhsina.v ",
+      "email": "b@b",
+      "password": "11111",
+      "cart": [],
       "isBlocked": false,
       "isAdmin": false
     }

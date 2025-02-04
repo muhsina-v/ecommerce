@@ -48,12 +48,27 @@ export const UserProvider = ({ children }) => {
       const user = users.find(
         (u) => u.email === email && u.password === password
       );
+      //admin
+      
+
       if (user) {
+         if(user.isAdmin===false){
+         // alert("loged sucsess")
+          setUsers(user)
+          localStorage.setItem("currentUser", JSON.stringify(user));
+          localStorage.setItem("cart",JSON.stringify(user?.cart))
+          navigate("/");
+         }else{
+          setUsers(user)
+          localStorage.setItem("currentUser", JSON.stringify(user));
+          navigate("/Admindashboard")
+          alert("welcome to adminpage")
+         }
         setCurrentUser(user);
-        localStorage.setItem("currentUser", JSON.stringify(user));
-        localStorage.setItem("cart",JSON.stringify(user?.cart))
-        navigate("/");
-      }else{
+       
+      alert("loged sucsess")
+      } 
+      else{
         alert("Invalid Credentials");
         return;
       }

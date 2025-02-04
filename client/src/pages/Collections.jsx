@@ -13,7 +13,7 @@ function Collections() {
         console.log("dataaa",data);
         
       } catch (error) {
-        console.error("Error fetching data:", error);
+        console.error("Error fetching data:",error);
       }
     };
 

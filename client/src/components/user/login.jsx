@@ -1,24 +1,22 @@
 import React, { useContext, useState } from "react";
 import { UserContext } from "../../context/UserProvider";
 
+
 function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const {loginUser} = useContext(UserContext)
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    if (!email || !password) {
-      setError("Both username and password are required!");
-      return;
-    }
     try {
       await(loginUser(email,password))
     } catch (error) {
       console.log(error)
     }
+
   };
 
   return (

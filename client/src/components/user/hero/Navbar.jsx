@@ -5,7 +5,9 @@ import logo from "../../../assets/logo.jpg";
 import { UserContext } from "../../../context/UserProvider";
 import { CartContext } from "../../../context/CartCondext";
 
+
 function Navbar() {
+  c
   const navigate = useNavigate();
   const { currentUser, userLogout } = useContext(UserContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);

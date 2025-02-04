@@ -12,6 +12,7 @@ import Home from './pages/Home'
 import Cart from './pages/cart'
 import Wishlist from './pages/wishlist'
 import Details from './pages/Details'
+import Admindashboard from './components/admin/Admindashboard'
 
 
 function App() {
@@ -31,12 +32,13 @@ function App() {
              <Route path='/Cart' element={<Cart />}/>
              <Route path='/wishlist' element={<Wishlist />}/>
              <Route path='/product/details/:id' element={<Details/>}/> 
-             
+              <Route path='/Admindashboard' element={<Admindashboard/>}/>
+              
              {/* <Route path="*" element={<NotFound />} />  Handles 404 */}
 
         </Routes>
-      
         <Footer />
+        
       </>
     
   )

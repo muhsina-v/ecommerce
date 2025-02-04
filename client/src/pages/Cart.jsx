@@ -69,12 +69,13 @@
 
 
 import React, { useContext } from "react";
-import { CartContext } from "../context/CartCondext";
+import { CartContext } from "../context/CartCondext"; // Ensure this path is correct
 
 function Cart() {
-  const { cart, removeFromCart, clearCart } = useContext(CartContext); 
-  
+  const { cart, removeFromCart, clearCart } = useContext(CartContext); // Destructure clearCart here
+
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+   
 
   return (
     <div className="bg-gray-100 min-h-screen p-6">
@@ -101,11 +102,10 @@ function Cart() {
             </div>
           ))}
 
-         
           <div className="flex justify-between items-center mt-6">
             <h3 className="text-xl font-bold text-gray-800">Total: ₹{totalPrice}</h3>
             <button 
-              onClick={() => clearCart()}
+              onClick={clearCart} // Call clearCart when clicked
               className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700 transition"
             >
               Proceed to Payment
@@ -115,7 +115,8 @@ function Cart() {
       )}
     </div>
   );
+  
+  
 }
 
 export default Cart;
-

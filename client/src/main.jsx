@@ -6,6 +6,7 @@ import { UserProvider } from "./context/UserProvider.jsx";
 import { BrowserRouter } from "react-router-dom";
 import DataContext from "./context/DataContext.jsx";
 import { CartProvider } from "./context/CartCondext.jsx";
+//import { ToastContainer } from "react-toastify";
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
@@ -14,6 +15,7 @@ createRoot(document.getElementById("root")).render(
       <CartProvider>
           <DataContext>
             <App />
+            
           </DataContext>
       </CartProvider>
         </UserProvider>

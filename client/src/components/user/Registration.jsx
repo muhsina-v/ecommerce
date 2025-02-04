@@ -1,6 +1,8 @@
 import { useContext, useState } from "react";
 import axios from "axios";
 import { UserContext } from "../../context/UserProvider";
+import { useNavigate } from "react-router-dom";
+
 
 const Register = () => {
   const {registerUser} = useContext(UserContext)
@@ -12,8 +14,6 @@ const Register = () => {
   });
 
 
-
-
   const [passwordError,setPasswordError] =useState(""); // Stores password error message
 
   const [message,setMessage]=useState(""); // Stores success or failure messages
@@ -23,6 +23,8 @@ const Register = () => {
     const {name,value} = e.target;
     setFormData((prevData) => (
       { ...prevData, [name]: value }));
+
+     
 
     // Clear password error when user types
     if (name === "password" || name === "cPassword") {
@@ -40,6 +42,9 @@ const Register = () => {
       setPasswordError("Passwords do not match!");
       return;
     }
+
+    
+     
 
     try {
       await registerUser(formData.name,formData.email,formData.password)
