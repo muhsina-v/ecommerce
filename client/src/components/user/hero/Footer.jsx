@@ -1,8 +1,13 @@
 import React from 'react'
 import {FaFacebook,FaTwitter,
 FaInstagram} from "react-icons/fa";
+import { useLocation } from 'react-router-dom';
 
 function Footer() {
+  const location=useLocation()
+  const hiddenpaths=["/Admindashboard","/Addproduct","/Adminuser","/Oders","/logout"]
+  if(hiddenpaths.includes(location.pathname))
+    return null;
 
   return (
     <div>

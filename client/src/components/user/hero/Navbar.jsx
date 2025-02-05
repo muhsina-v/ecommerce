@@ -1,13 +1,17 @@
 import { useContext, useState } from "react";
 import { FaShoppingCart, FaRegHeart, FaBars, FaTimes } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import logo from "../../../assets/logo.jpg";
 import { UserContext } from "../../../context/UserProvider";
 import { CartContext } from "../../../context/CartCondext";
 
 
 function Navbar() {
-  c
+  const location=useLocation()
+  const hiddenpaths=["/Admindashboard","/Addproduct","/Adminuser","/Oders","/logout"] 
+  if(hiddenpaths.includes(location.pathname))
+
+    return null
   const navigate = useNavigate();
   const { currentUser, userLogout } = useContext(UserContext);
   const [isMenuOpen, setIsMenuOpen] = useState(false);

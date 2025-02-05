@@ -259,7 +259,44 @@
       "name": "ba",
       "email": "ba@g",
       "password": "123",
-      "cart": [],
+      "cart": [
+        {
+          "id": "4",
+          "type": "Living Room Furniture",
+          "image": "https://m.media-amazon.com/images/I/71BB-2VYFoL._AC_UF894,1000_QL80_.jpg",
+          "imageCategory": "Coffee Table",
+          "description": "Vittsjoe Coffee Table",
+          "price": 499.99,
+          "offerPrice": 374.99,
+          "details": "Add a modern touch to your living room with the Vittsjoe Coffee Table. Featuring a black-brown frame and glass top, this table combines style with functionality. Its sleek design and versatile use make it a perfect addition to any contemporary space.",
+          "category": "Furniture",
+          "quantity": 1
+        },
+        {
+          "id": "5",
+          "type": "Bedroom Furniture",
+          "image": "https://i.pinimg.com/564x/21/c9/c2/21c9c2a3464def80a6b99ddcd92f849e.jpg",
+          "imageCategory": "Wardrobe",
+          "description": "Pax/Bergsbo Wardrobe",
+          "price": 799,
+          "offerPrice": 639.2,
+          "details": "Organize your bedroom with the Pax/Bergsbo Wardrobe in Dark Gray. This spacious wardrobe offers ample storage and features a modern design. Its sliding doors and adjustable shelves provide flexibility, ideal for keeping your clothes and accessories organized.",
+          "category": "Bedroom",
+          "quantity": 1
+        },
+        {
+          "id": "10",
+          "type": "Living Room Furniture",
+          "image": "https://i.pinimg.com/474x/cb/bf/e2/cbbfe237ab8f46e0b1112b1252780690.jpg",
+          "imageCategory": "Outdoor Set",
+          "description": "Askholmen Table and 2 Chairs",
+          "price": 99,
+          "quantity": 1,
+          "offerPrice": 69.3,
+          "details": "Enjoy outdoor dining with the Askholmen Table and 2 Chairs in Light Brown Stained finish. This outdoor set features a compact design and durable materials, perfect for balconies or small patios. Its weather-resistant construction ensures long-term enjoyment.",
+          "category": "Bedroom"
+        }
+      ],
       "isBlocked": false,
       "isAdmin": false
     },

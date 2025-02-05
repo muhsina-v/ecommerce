@@ -12,7 +12,12 @@ import Home from './pages/Home'
 import Cart from './pages/cart'
 import Wishlist from './pages/wishlist'
 import Details from './pages/Details'
+//admin
 import Admindashboard from './components/admin/Admindashboard'
+import Addproduct from './components/admin/Addproduct'
+import Adminnavbar from './components/admin/Adminnavbar'
+import Oders from './components/admin/Oders'
+import Adminlayout from './components/admin/Adminlayout'
 
 
 function App() {
@@ -32,7 +37,13 @@ function App() {
              <Route path='/Cart' element={<Cart />}/>
              <Route path='/wishlist' element={<Wishlist />}/>
              <Route path='/product/details/:id' element={<Details/>}/> 
-              <Route path='/Admindashboard' element={<Admindashboard/>}/>
+             {/* //admin */}
+             <Route path='/Adminlayout' element={<Adminlayout/>}>
+              <Route path='Admindashboard' element={<Admindashboard/>}/>
+              <Route path='Addproduct' element={<Addproduct />}/>
+              <Route path='Adminnavbar' element={<Adminnavbar />}/>
+              <Route path='Oders' element={<Oders />}/>
+              </Route>
               
              {/* <Route path="*" element={<NotFound />} />  Handles 404 */}
 

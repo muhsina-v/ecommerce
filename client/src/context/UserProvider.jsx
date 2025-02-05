@@ -53,7 +53,7 @@ export const UserProvider = ({ children }) => {
 
       if (user) {
          if(user.isAdmin===false){
-         // alert("loged sucsess")
+         
           setUsers(user)
           localStorage.setItem("currentUser", JSON.stringify(user));
           localStorage.setItem("cart",JSON.stringify(user?.cart))
@@ -62,11 +62,11 @@ export const UserProvider = ({ children }) => {
           setUsers(user)
           localStorage.setItem("currentUser", JSON.stringify(user));
           navigate("/Admindashboard")
-          alert("welcome to adminpage")
+          // alert("welcome to adminpage")
          }
         setCurrentUser(user);
        
-      alert("loged sucsess")
+      alert("logged successfully")
       } 
       else{
         alert("Invalid Credentials");
