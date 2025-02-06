@@ -308,6 +308,24 @@
       "cart": [],
       "isBlocked": false,
       "isAdmin": false
+    },
+    {
+      "id": "784f",
+      "name": "user",
+      "email": "user@g",
+      "password": "user",
+      "cart": [],
+      "isBlocked": false,
+      "isAdmin": false
+    },
+    {
+      "id": "d130",
+      "name": "admin",
+      "email": "admin@g",
+      "password": "admin",
+      "cart": [],
+      "isBlocked": false,
+      "isAdmin": true
     }
   ]
 }

@@ -1,16 +1,34 @@
-import { Outlet } from "react-router-dom";
-import Adminnavbar from "./Adminnavbar";
+import { useState } from "react";
+import Addproduct from "./Addproduct";
+import Adminuser from "./Adminuser";
+import Orders from "./Orders";
+import AdminSidebar from "./AdminSidebar";
+import Admindashboard from "./Admindashboard";
 
-function Adminlayout(){
-    return(
-        <div className="flex">
-            <Adminnavbar/>
-            <div className="flex-1 p-6">
-                <Outlet />
+function Adminlayout() {
+  const [activeComponent, setActiveComponent] = useState("dashboard");
 
-            </div>
-        </div>
+  const renderComponent = () => {
+    switch (activeComponent) {
+      case "dashboard":
+        return <Admindashboard />;
+      case "addproduct":
+        return <Addproduct />;
+      case "adminuser":
+        return <Adminuser />;
+      case "orders":
+        return <Orders />;
+      default:
+        return <Admindashboard />;
+    }
+  };
 
-    )
+  return (
+    <div className="flex">
+      <AdminSidebar setActiveComponent={setActiveComponent} />
+      <div className="flex-1 p-5 ml-64">{renderComponent()}</div>
+    </div>
+  );
 }
+
 export default Adminlayout;

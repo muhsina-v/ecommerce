@@ -61,7 +61,7 @@ export const UserProvider = ({ children }) => {
          }else{
           setUsers(user)
           localStorage.setItem("currentUser", JSON.stringify(user));
-          navigate("/Admindashboard")
+          navigate("/admin")
           // alert("welcome to adminpage")
          }
         setCurrentUser(user);
