@@ -69,7 +69,7 @@
 
 
 import React, { useContext } from "react";
-import { CartContext } from "../context/CartCondext"; // Ensure this path is correct
+import { CartContext } from "../context/CartCondext";
 
 function Cart() {
   const { cart, removeFromCart, clearCart } = useContext(CartContext); // Destructure clearCart here

@@ -2,17 +2,15 @@ import React, { createContext, useState, useEffect, useContext } from "react";
 import { UserContext } from "./UserProvider";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import { toast } from "react-toastify";
+//import { toast } from "react-toastify";
 
 
 export const CartContext = createContext();
 
 const clearCart = () => {
-    setCart([]); // ✅ This will empty the cart
+    setCart([]);
   };
   
-
-
 export function CartProvider({ children }) {
   const { currentUser, setCurrentUser } = useContext(UserContext);
   const navigate = useNavigate();
@@ -53,7 +51,7 @@ export function CartProvider({ children }) {
         JSON.stringify({ ...currentUser, cart: newCart })
         
       );
-      toast.success("Removed from Cart! 🗑️");
+     // toast.success("Removed from Cart! 🗑️");
     } catch (error) {
       console.log(error);
     }

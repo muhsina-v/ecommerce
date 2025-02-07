@@ -7,18 +7,20 @@ import { BrowserRouter } from "react-router-dom";
 import DataContext from "./context/DataContext.jsx";
 import { CartProvider } from "./context/CartCondext.jsx";
 //import { ToastContainer } from "react-toastify";
+import {AdminProvider} from "./components/admin/adminCondext/AddCondext.jsx"
 
 createRoot(document.getElementById("root")).render(
   <StrictMode>
     <BrowserRouter>
-        <UserProvider>
-      <CartProvider>
+    <AdminProvider>
+      <UserProvider>
+        <CartProvider>
           <DataContext>
             <App />
-            
           </DataContext>
-      </CartProvider>
-        </UserProvider>
+        </CartProvider>
+      </UserProvider>
+      </AdminProvider>
     </BrowserRouter>
   </StrictMode>
 );
