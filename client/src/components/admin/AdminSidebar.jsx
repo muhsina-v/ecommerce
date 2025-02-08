@@ -15,13 +15,13 @@ function AdminSidebar({ setActiveComponent }) {
       
       <button
         onClick={toggleSidebar}
-        className="fixed top-4 left-4 z-30 p-2 bg-blue-950 text-white rounded-lg md:hidden"
+        className="fixed top-0.5 left-2 z-30 p-2 bg-blue-950 text-white rounded-lg md:hidden"
       >
         {isOpen ? <FaTimes /> : <FaBars />}
       </button>
 
       <div
-        className={`h-screen bg-blue-950 w-64 p-9 fixed z-20 transform transition-transform duration-300 ease-in-out ${
+        className={`h-screen bg-blue-950 ${isOpen ? "w-64 p-9 transform transition-transform duration-300 ease-in-ou" : "hidden" } t ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0`}
       >

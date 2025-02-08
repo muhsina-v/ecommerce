@@ -25,7 +25,7 @@ function App() {
   return (
     <>
       {!isAdminRoute && <Navbar />  }
-      {isAdminRoute && <AdminSidebar />}
+      {/* {isAdminRoute && <AdminSidebar />} */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Collections" element={<Collections />} />

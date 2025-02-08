@@ -2,15 +2,9 @@ import React, { createContext, useState, useEffect, useContext } from "react";
 import { UserContext } from "./UserProvider";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-//import { toast } from "react-toastify";
-
 
 export const CartContext = createContext();
 
-const clearCart = () => {
-    setCart([]);
-  };
-  
 export function CartProvider({ children }) {
   const { currentUser, setCurrentUser } = useContext(UserContext);
   const navigate = useNavigate();
@@ -32,10 +26,9 @@ export function CartProvider({ children }) {
         return;
       }
       if (cart.find((item) => item.id == product.id)) {
-        window.alert("product altredy exist");
+        window.alert("Product already exists in the cart!");
         return;
       }
-      console.log(cart);
 
       const newCart = [...cart, { ...product, quantity: 1 }];
 
@@ -43,33 +36,40 @@ export function CartProvider({ children }) {
         `http://localhost:3000/users/${currentUser?.id}`,
         { ...currentUser, cart: newCart }
       );
-      console.log(cart);
+
       setCart(newCart);
       setCurrentUser({ ...currentUser, cart: newCart });
       localStorage.setItem(
         "currentUser",
         JSON.stringify({ ...currentUser, cart: newCart })
-        
       );
-     // toast.success("Removed from Cart! 🗑️");
     } catch (error) {
       console.log(error);
     }
   };
 
   const removeFromCart = (productId) => {
-    const newCart = cart.filter((item)=>item.id !== productId)
-    setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
-    setCurrentUser({ ...currentUser,cart :newCart });
+    const newCart = cart.filter((item) => item.id !== productId);
+    setCart(newCart);
+    setCurrentUser({ ...currentUser, cart: newCart });
     localStorage.setItem(
       "currentUser",
       JSON.stringify({ ...currentUser, cart: newCart })
     );
   };
-  
-  
+
+  const clearCart = () => {
+    setCart([]); 
+    setCurrentUser({ ...currentUser, cart: [] }); 
+    localStorage.setItem(
+      "currentUser",
+      JSON.stringify({ ...currentUser, cart: [] })
+    );
+    localStorage.removeItem("cart"); 
+  };
+
   return (
-    <CartContext.Provider value={{ cart, addToCart, removeFromCart,clearCart }}>
+    <CartContext.Provider value={{ cart, addToCart, removeFromCart, clearCart }}>
       {children}
     </CartContext.Provider>
   );

@@ -24,9 +24,9 @@ function Adminlayout() {
   };
 
   return (
-    <div className="flex">
+    <div className="flex w-full">
       <AdminSidebar setActiveComponent={setActiveComponent} />
-      <div className="flex-1 p-5 ml-64">{renderComponent()}</div>
+      <div className="w-full">{renderComponent()}</div>
     </div>
   );
 }

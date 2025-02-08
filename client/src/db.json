@@ -1,6 +1,17 @@
 {
   "products": [
     {
+      "id": "1",
+      "type": "Living Room Furniture",
+      "image": "https://i.pinimg.com/564x/be/61/0b/be610b47a66e0a9cc5d9599796675681.jpg",
+      "imageCategory": "Sofa",
+      "description": "Friheten Sleeper Sectional, 3-seat with storage",
+      "price": 899,
+      "offerPrice": 10000,
+      "details": "Enhance your living room with the Friheten Sleeper Sectional in Skiftebo Dark Gray. This versatile sofa offers spacious seating and convenient storage, perfect for small spaces. The sleeper feature provides a comfortable bed for guests, while the modern design complements various decor styles.",
+      "category": "Furniture"
+    },
+    {
       "id": "2",
       "type": "Dining Room Furniture",
       "image": "https://images.squarespace-cdn.com/content/v1/58b9e3da9de4bbb44f9988ca/fe712f23-2bcf-4257-a7ad-5c680c8e7ea5/Traditional+dining+room+-+square+table+-+AI+Image.png",
@@ -28,8 +39,8 @@
       "image": "https://m.media-amazon.com/images/I/71BB-2VYFoL._AC_UF894,1000_QL80_.jpg",
       "imageCategory": "Coffee Table",
       "description": "Vittsjoe Coffee Table",
-      "price": 499.99,
-      "offerPrice": 374.99,
+      "price": "374.99",
+      "offerPrice": "499.99",
       "details": "Add a modern touch to your living room with the Vittsjoe Coffee Table. Featuring a black-brown frame and glass top, this table combines style with functionality. Its sleek design and versatile use make it a perfect addition to any contemporary space.",
       "category": "Furniture"
     },
@@ -40,7 +51,7 @@
       "imageCategory": "Wardrobe",
       "description": "Pax/Bergsbo Wardrobe",
       "price": 799,
-      "offerPrice": 639.2,
+      "offerPrice": "850",
       "details": "Organize your bedroom with the Pax/Bergsbo Wardrobe in Dark Gray. This spacious wardrobe offers ample storage and features a modern design. Its sliding doors and adjustable shelves provide flexibility, ideal for keeping your clothes and accessories organized.",
       "category": "Bedroom"
     },
@@ -50,8 +61,8 @@
       "image": "https://homedecorlo.com/cdn/shop/products/61_lDJ6opzL_530x@2x.jpg?v=1630399629",
       "imageCategory": "warm light",
       "description": "Chandelier Hanging Light",
-      "price": 69.99,
-      "offerPrice": 55.99,
+      "price": "500",
+      "offerPrice": "600",
       "details": "Add warmth and elegance to your home with our beautiful hanging lights, designed to create a cozy and stylish ambiance. Whether you prefer modern pendant lights, vintage chandeliers, or minimalist hanging lamps, our collection offers a variety of designs to complement any decor.",
       "category": "Storage"
     },
@@ -61,9 +72,9 @@
       "image": "https://i.pinimg.com/474x/ef/52/b4/ef52b4782dcdadaae5b3b51b381c3a66.jpg",
       "imageCategory": "Drawer Chest",
       "description": "Björksnäs 5-Drawer Chest, Birch",
-      "price": 249,
+      "price": "3000",
       "quantity": 7,
-      "offerPrice": 186.75,
+      "offerPrice": "4666",
       "details": "Add storage and style to your bedroom with the Björksnäs 5-Drawer Chest in Birch. This chest features solid birch wood construction and spacious drawers, perfect for organizing clothes or accessories. Its classic design adds a touch of elegance to any space.",
       "category": "Bedroom"
     },
@@ -73,10 +84,22 @@
       "image": "https://i.pinimg.com/474x/ce/80/a6/ce80a6886163ebe6241f8582db83c8e8.jpg",
       "imageCategory": "Bar Stool",
       "description": "Stig Bar Stool with Backrest, Black",
-      "price": 39.99,
+      "price": "800",
       "quantity": 30,
-      "offerPrice": 31.99,
+      "offerPrice": "999",
       "details": "Upgrade your kitchen or bar area with the Stig Bar Stool in Black. This bar stool features a supportive backrest and comfortable seat, ideal for extended use. Its minimalist design and durable construction make it a stylish and practical choice.",
+      "category": "Furniture"
+    },
+    {
+      "id": "9",
+      "type": "Decor",
+      "image": "https://www.jiomart.com/images/product/original/rvvb0si6p6/sehaz-artworks-love-home-decor-items-wall-hanging-home-decor-items-wall-hanging-accessory-wall-decore-items-room-decoration-decoration-for-office-0042-product-images-orvvb0si6p6-p601030772-0-202304281600.jpg?im=Resize=(420,420)",
+      "imageCategory": "wall decor",
+      "description": "Crafted colourfull decor",
+      "price": "300",
+      "quantity": 4,
+      "offerPrice": "350",
+      "details": "Enhance your home with our exquisite Wall Decor Collection, designed to bring elegance and personality to any space. Whether you're looking for modern art pieces, vintage wall hangings, or nature-inspired designs, our collection offers a variety of styles to suit every taste.",
       "category": "Furniture"
     },
     {
@@ -85,11 +108,22 @@
       "image": "https://i.pinimg.com/474x/cb/bf/e2/cbbfe237ab8f46e0b1112b1252780690.jpg",
       "imageCategory": "Outdoor Set",
       "description": "Askholmen Table and 2 Chairs",
-      "price": 99,
+      "price": "9099",
       "quantity": 10,
-      "offerPrice": 69.3,
+      "offerPrice": "10999",
       "details": "Enjoy outdoor dining with the Askholmen Table and 2 Chairs in Light Brown Stained finish. This outdoor set features a compact design and durable materials, perfect for balconies or small patios. Its weather-resistant construction ensures long-term enjoyment.",
       "category": "Bedroom"
+    },
+    {
+      "id": "11",
+      "type": "Living Room Furniture",
+      "image": "https://i.pinimg.com/564x/7a/ce/21/7ace213dac0cdf2cc397030fa5a6186a.jpg",
+      "imageCategory": "Corner Sleeper Sofa",
+      "description": "Finnala Sleeper Sofa",
+      "price": "7999",
+      "offerPrice": "8000",
+      "details": "Add versatility to your living room with the Finnala Corner Sleeper Sofa. This 5-seat sofa includes a chaise lounge, perfect for lounging or hosting guests. Its corner design maximizes space, while the sleeper function offers additional comfort for overnight guests.",
+      "category": "Furniture"
     },
     {
       "id": "12",
@@ -97,37 +131,49 @@
       "image": "https://i.pinimg.com/474x/df/04/e3/df04e3dc975255f9e13736145379e64b.jpg",
       "imageCategory": "Bed Frame",
       "description": "Malm Bed Frame",
-      "price": 299,
-      "offerPrice": 239.2,
+      "price": "800",
+      "offerPrice": "900",
       "details": "Upgrade your bedroom with the Malm Bed Frame in Black-Brown. This modern bed frame features a sleek design and sturdy construction, providing a perfect foundation for a good night's sleep. The minimalist look complements any bedroom decor.",
       "category": "Bedroom"
     },
     {
       "id": "13",
-      "type": "Bedroom Furniture",
-      "image": "https://www.vidaxl.com/dw/image/v2/BFNS_PRD/on/demandware.static/-/Sites-vidaxl-catalog-master-sku/default/dw5b62e189/hi-res/436/460/3201518/image_1_3201518.jpg?sw=400",
-      "imageCategory": "Bed Frame",
-      "description": "Malm Bed Frame",
-      "price": 299,
-      "offerPrice": 239.2,
-      "details": "Upgrade your bedroom with the Malm Bed Frame in Black-Brown. This modern bed frame features a sleek design and sturdy construction, providing a perfect foundation for a good night's sleep. The minimalist look complements any bedroom decor.",
-      "category": "Bedroom"
+      "image": "https://homedecorlo.com/cdn/shop/products/41x3-nmWpuL_180x.jpg?v=1624674926",
+      "imageCategory": "decor",
+      "description": "iDream Cute Couple Proposing Guy Resin Showpiece ",
+      "offerPrice": "900",
+      "price": "891",
+      "details": "",
+      "type": "Decor"
     },
     {
       "id": "14",
       "image": "https://homedecorlo.com/cdn/shop/products/51C-4WV6WBL_180x.jpg?v=1642057255",
       "imageCategory": " Flower Vase ",
       "description": "gDECENT GLASS Glass Flower Vase (6 Inch, Clear)",
-      "offerPrice": "333333",
-      "price": "3333"
+      "offerPrice": "33330",
+      "price": "3333",
+      "type": "Decor"
     },
     {
-      "id": "13",
-      "image": "https://homedecorlo.com/cdn/shop/products/41x3-nmWpuL_180x.jpg?v=1624674926",
-      "imageCategory": "decor",
-      "description": "iDream Cute Couple Proposing Guy Resin Showpiece Couple Miniatures Valentines Gifts for Girlfriend",
+      "id": "15",
+      "type": "Bedroom Furniture",
+      "image": "https://ideacdn.net/idea/dq/03/myassets/products/760/8681285941565-1.jpg?revision=1697143329",
+      "imageCategory": "Bed Frame",
+      "description": "Malm Bed Frame",
+      "price": "400",
+      "offerPrice": "499",
+      "details": "Upgrade your bedroom with the Malm Bed Frame in Black-Brown. This modern bed frame features a sleek design and sturdy construction, providing a perfect foundation for a good night's sleep. The minimalist look complements any bedroom decor.",
+      "category": "Bedroom",
+      "rating": "★★★★☆"
+    },
+    {
+      "id": "16",
+      "image": "https://homedecorlo.com/cdn/shop/products/51C-4WV6WBL_180x.jpg?v=1642057255",
+      "imageCategory": " Flower Vase ",
+      "description": "gDECENT GLASS Glass Flower Vase (6 Inch, Clear)",
       "offerPrice": "900",
-      "price": "891"
+      "price": "830"
     }
   ],
   "users": [
@@ -138,16 +184,52 @@
       "password": "111",
       "cart": [
         {
-          "id": "9",
+          "id": "1",
+          "type": "Living Room Furniture",
+          "image": "https://i.pinimg.com/564x/be/61/0b/be610b47a66e0a9cc5d9599796675681.jpg",
+          "imageCategory": "Sofa",
+          "description": "Friheten Sleeper Sectional, 3-seat with storage",
+          "price": 899,
+          "offerPrice": 10000,
+          "details": "Enhance your living room with the Friheten Sleeper Sectional in Skiftebo Dark Gray. This versatile sofa offers spacious seating and convenient storage, perfect for small spaces. The sleeper feature provides a comfortable bed for guests, while the modern design complements various decor styles.",
+          "category": "Furniture",
+          "quantity": 1
+        },
+        {
+          "id": "2",
+          "type": "Dining Room Furniture",
+          "image": "https://images.squarespace-cdn.com/content/v1/58b9e3da9de4bbb44f9988ca/fe712f23-2bcf-4257-a7ad-5c680c8e7ea5/Traditional+dining+room+-+square+table+-+AI+Image.png",
+          "imageCategory": "Dining Set",
+          "description": "Nordviken Table and 6 Chairs",
+          "price": 8799,
+          "offerPrice": 9000,
+          "details": "Create a classic dining experience with the Nordviken Table and 6 Chairs in Antique Stain. This dining set features a sturdy table and comfortable chairs, perfect for family meals or gatherings. The timeless design and durable construction ensure long-lasting enjoyment.",
+          "category": "Dining Room",
+          "quantity": 1
+        },
+        {
+          "id": "5",
+          "type": "Bedroom Furniture",
+          "image": "https://i.pinimg.com/564x/21/c9/c2/21c9c2a3464def80a6b99ddcd92f849e.jpg",
+          "imageCategory": "Wardrobe",
+          "description": "Pax/Bergsbo Wardrobe",
+          "price": 799,
+          "offerPrice": "850",
+          "details": "Organize your bedroom with the Pax/Bergsbo Wardrobe in Dark Gray. This spacious wardrobe offers ample storage and features a modern design. Its sliding doors and adjustable shelves provide flexibility, ideal for keeping your clothes and accessories organized.",
+          "category": "Bedroom",
+          "quantity": 1
+        },
+        {
+          "id": "6",
           "type": "Decor",
-          "image": "https://www.jiomart.com/images/product/original/rvvb0si6p6/sehaz-artworks-love-home-decor-items-wall-hanging-home-decor-items-wall-hanging-accessory-wall-decore-items-room-decoration-decoration-for-office-0042-product-images-orvvb0si6p6-p601030772-0-202304281600.jpg?im=Resize=(420,420)",
-          "imageCategory": "wall decor",
-          "description": "Crafted colourfull decor",
-          "price": 5,
-          "quantity": 1,
-          "offerPrice": 323.1,
-          "details": "Enhance your home with our exquisite Wall Decor Collection, designed to bring elegance and personality to any space. Whether you're looking for modern art pieces, vintage wall hangings, or nature-inspired designs, our collection offers a variety of styles to suit every taste.",
-          "category": "Furniture"
+          "image": "https://homedecorlo.com/cdn/shop/products/61_lDJ6opzL_530x@2x.jpg?v=1630399629",
+          "imageCategory": "warm light",
+          "description": "Chandelier Hanging Light",
+          "price": "500",
+          "offerPrice": "600",
+          "details": "Add warmth and elegance to your home with our beautiful hanging lights, designed to create a cozy and stylish ambiance. Whether you prefer modern pendant lights, vintage chandeliers, or minimalist hanging lamps, our collection offers a variety of designs to complement any decor.",
+          "category": "Storage",
+          "quantity": 1
         }
       ],
       "isBlocked": false,
@@ -205,7 +287,7 @@
       "email": "b@b",
       "password": "11111",
       "cart": [],
-      "isBlocked": false,
+      "isBlocked": true,
       "isAdmin": false
     },
     {

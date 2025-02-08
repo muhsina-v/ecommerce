@@ -14,43 +14,33 @@ const Register = () => {
   });
 
 
-  const [passwordError,setPasswordError] =useState(""); // Stores password error message
+  const [passwordError,setPasswordError] =useState(""); 
 
-  const [message,setMessage]=useState(""); // Stores success or failure messages
+  const [message,setMessage]=useState(""); 
 
-  // Handle input changes
   const handleChange=(e) => {
     const {name,value} = e.target;
     setFormData((prevData) => (
       { ...prevData, [name]: value }));
 
      
-
-    // Clear password error when user types
     if (name === "password" || name === "cPassword") {
       setPasswordError("");
     }
   };
 
-  // Handle form submission
   const handleSubmit = async (event) => {
     event.preventDefault();
     setMessage("");
 
-    // Password validation
     if (formData.password !== formData.cPassword) {
       setPasswordError("Passwords do not match!");
       return;
     }
-
-    
-     
-
     try {
       await registerUser(formData.name,formData.email,formData.password)
-      // Store data in JSON Server
       setMessage("Registration successful!");
-      setFormData({name:"", email: "", password: "", cPassword: ""}); // Clear form
+      setFormData({name:"", email: "", password: "", cPassword: ""}); 
     } catch (error) {
       setMessage("Registration failed. Try again.");
     }
