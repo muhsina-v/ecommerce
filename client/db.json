@@ -184,18 +184,6 @@
       "password": "111",
       "cart": [
         {
-          "id": "1",
-          "type": "Living Room Furniture",
-          "image": "https://i.pinimg.com/564x/be/61/0b/be610b47a66e0a9cc5d9599796675681.jpg",
-          "imageCategory": "Sofa",
-          "description": "Friheten Sleeper Sectional, 3-seat with storage",
-          "price": 899,
-          "offerPrice": 10000,
-          "details": "Enhance your living room with the Friheten Sleeper Sectional in Skiftebo Dark Gray. This versatile sofa offers spacious seating and convenient storage, perfect for small spaces. The sleeper feature provides a comfortable bed for guests, while the modern design complements various decor styles.",
-          "category": "Furniture",
-          "quantity": 1
-        },
-        {
           "id": "2",
           "type": "Dining Room Furniture",
           "image": "https://images.squarespace-cdn.com/content/v1/58b9e3da9de4bbb44f9988ca/fe712f23-2bcf-4257-a7ad-5c680c8e7ea5/Traditional+dining+room+-+square+table+-+AI+Image.png",
@@ -205,30 +193,6 @@
           "offerPrice": 9000,
           "details": "Create a classic dining experience with the Nordviken Table and 6 Chairs in Antique Stain. This dining set features a sturdy table and comfortable chairs, perfect for family meals or gatherings. The timeless design and durable construction ensure long-lasting enjoyment.",
           "category": "Dining Room",
-          "quantity": 1
-        },
-        {
-          "id": "5",
-          "type": "Bedroom Furniture",
-          "image": "https://i.pinimg.com/564x/21/c9/c2/21c9c2a3464def80a6b99ddcd92f849e.jpg",
-          "imageCategory": "Wardrobe",
-          "description": "Pax/Bergsbo Wardrobe",
-          "price": 799,
-          "offerPrice": "850",
-          "details": "Organize your bedroom with the Pax/Bergsbo Wardrobe in Dark Gray. This spacious wardrobe offers ample storage and features a modern design. Its sliding doors and adjustable shelves provide flexibility, ideal for keeping your clothes and accessories organized.",
-          "category": "Bedroom",
-          "quantity": 1
-        },
-        {
-          "id": "6",
-          "type": "Decor",
-          "image": "https://homedecorlo.com/cdn/shop/products/61_lDJ6opzL_530x@2x.jpg?v=1630399629",
-          "imageCategory": "warm light",
-          "description": "Chandelier Hanging Light",
-          "price": "500",
-          "offerPrice": "600",
-          "details": "Add warmth and elegance to your home with our beautiful hanging lights, designed to create a cozy and stylish ambiance. Whether you prefer modern pendant lights, vintage chandeliers, or minimalist hanging lamps, our collection offers a variety of designs to complement any decor.",
-          "category": "Storage",
           "quantity": 1
         }
       ],
@@ -307,6 +271,15 @@
       "cart": [],
       "isBlocked": false,
       "isAdmin": true
+    },
+    {
+      "id": "0cbd",
+      "name": "irfan",
+      "email": "irfan@gmail.com",
+      "password": "123irfu",
+      "cart": [],
+      "isBlocked": false,
+      "isAdmin": false
     }
   ]
 }
