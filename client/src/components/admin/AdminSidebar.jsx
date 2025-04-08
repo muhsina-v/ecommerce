@@ -11,7 +11,7 @@ function AdminSidebar({ setActiveComponent }) {
   };
 
   return (
-    <>
+    <div className="">
       
       <button
         onClick={toggleSidebar}
@@ -21,7 +21,7 @@ function AdminSidebar({ setActiveComponent }) {
       </button>
 
       <div
-        className={`h-screen bg-blue-950 ${isOpen ? "w-64 p-9 transform transition-transform duration-300 ease-in-ou" : "hidden" } t ${
+        className={`h-screen bg-blue-950 ${isOpen ? "w-64 p-9 transform transition-transform duration-300 ease-in-ou" : "hidden md:flex md:w-64" } t ${
           isOpen ? "translate-x-0" : "-translate-x-full"
         } md:translate-x-0`}
       >
@@ -58,7 +58,7 @@ function AdminSidebar({ setActiveComponent }) {
           </button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 

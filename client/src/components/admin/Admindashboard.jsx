@@ -1,10 +1,10 @@
+import AdminSidebar from "./AdminSidebar";
 
 
 function Admindashboard() {
   return (
-    <div>
-      <h1 className="text-black text-xl">Admindashboard</h1>
-      
+    <div className=" ">
+      <h1 className="text-black text-xl">h</h1>
     </div>
   );
 }

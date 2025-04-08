@@ -29,7 +29,7 @@ export const UserProvider = ({ children }) => {
         alert("User already exists");
         return;
       }
-      await axios.post("http://localhost:3000/users/", {
+      await axios.post("http://localhost:3000/users", {
         name: name,
         email: email,
         password: password,
