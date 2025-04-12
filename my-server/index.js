@@ -17,8 +17,10 @@ app.use(cookieParser())
 
 
 app.use("/auth", authRoutes)
-// app.use("/user", userRoutes);
+//app.use("/user", userRoutes);
 
+
+  
 
 app.all("*",(req,res)=>{
     res.status(400).json({message:'cannot access the endpoint'})
